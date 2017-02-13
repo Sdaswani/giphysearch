@@ -36,5 +36,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>GiphyAPIKey</key>
+	<string>dc6zaTOxFJmzC</string>
 </dict>
 </plist>
