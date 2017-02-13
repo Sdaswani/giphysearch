@@ -43,5 +43,7 @@
 	</dict>
 	<key>GiphyAPIKey</key>
 	<string>dc6zaTOxFJmzC</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
 </dict>
 </plist>
