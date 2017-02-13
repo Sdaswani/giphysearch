@@ -3,7 +3,14 @@ iOS App for Simple Giphy Search
 
 In this age of Trump, are you in desperate need of cat GIFs on your iOS device? Then giphysearch is the app for you. Force close your Politico app, launch giphysearch, search for 'cats', and try to forget the last 3 months.
 
-It's pretty easy to setup and develop giphysearch - just clone it, load giphysearch/giphysearch.xcodeproj in Xcode 7.3.1, and make your changes. Building is as simple as pressing the play button in Xcode. You can run the project's tests by choosing 'Product -> Test'.
+It's pretty easy to setup and develop giphysearch:
+
+* clone it
+* install cocoapods: https://guides.cocoapods.org/using/getting-started.html
+* cd to giphysearch/giphysearch and run 'pod install'
+* load giphysearch.xcworkspace in Xcode 7.3.1, and make your changes. 
+
+Building is as simple as pressing the play button in Xcode. You can run the project's tests by choosing 'Product -> Test' (though note that sometimes the UI tests fail for no good reason).
 
 Note that so far the app has only been tested on the Xcode simulator.
 
