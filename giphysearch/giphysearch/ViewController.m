@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <Giphy-iOS/AXCGiphy.h>
 
 @interface ViewController ()
+
+@property (nonatomic, weak) IBOutlet UISearchBar* searchBar;
 
 @end
 
@@ -16,12 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [AXCGiphy setGiphyAPIKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"GiphyAPIKey"]];
+    self.searchBar.placeholder = @"Search Giphy";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark UISearchBarDelegate methods
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [AXCGiphy searchGiphyWithTerm:searchBar.text limit:10
+                           offset:0 completion:^(NSArray *results, NSError *error) {
+    }];
 }
 
 @end
