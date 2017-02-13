@@ -1,0 +1,5 @@
+target 'giphysearch' do
+  pod "Giphy-iOS"
+  pod 'AFNetworking/Serialization', '~> 2.3.1'
+  pod 'AnimatedGIFImageSerialization', '~> 0.2.0'
+end
