@@ -1,11 +1,3 @@
-//
-//  giphysearchUITests.m
-//  giphysearchUITests
-//
-//  Created by Anita Daswani on 2/12/17.
-//  Copyright © 2017 SMD. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
 
 @interface giphysearchUITests : XCTestCase
