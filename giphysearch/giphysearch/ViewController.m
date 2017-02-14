@@ -12,13 +12,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [AXCGiphy setGiphyAPIKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"GiphyAPIKey"]];
+    [self customizeView];
+}
+
+-(void)customizeView {
     [self setNeedsStatusBarAppearanceUpdate];
     
     // UISearchBar Color Customizations - BEGIN
     self.searchBar.backgroundImage = [[UIImage alloc] init];
     self.searchBar.backgroundColor = [UIColor darkGrayColor];
-    // TODO: Fix this terrible hack
-    self.searchBar.placeholder = @"Search Giphy                                                                                                                        ";
+    // TODO: Fix this terrible hack https://github.com/Sdaswani/giphysearch/issues/1
+    self.searchBar.placeholder = @"Search Giphy                                                                    ";
     
     // Magnifying glass icon needs to change color and be repositioned
     UITextField *searchBarTextField = [self.searchBar valueForKey:@"_searchField"];

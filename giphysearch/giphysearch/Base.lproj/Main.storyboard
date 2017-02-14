@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,15 +21,35 @@
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="                                           " translatesAutoresizingMaskIntoConstraints="NO" id="z8N-HE-rJa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                </variation>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Icv-vG-8dc"/>
                                 </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.087030440414507804" green="0.087030440414507804" blue="0.087030440414507804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="z8N-HE-rJa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cdO-VA-3Id"/>
+                            <constraint firstItem="z8N-HE-rJa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lPO-99-TGn">
+                                <variation key="heightClass=regular" constant="-20"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="z8N-HE-rJa" secondAttribute="trailing" id="tEn-hE-O6e">
+                                <variation key="heightClass=regular" constant="-20"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cdO-VA-3Id"/>
+                                <exclude reference="lPO-99-TGn"/>
+                                <exclude reference="tEn-hE-O6e"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="cdO-VA-3Id"/>
+                                <include reference="lPO-99-TGn"/>
+                                <include reference="tEn-hE-O6e"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="z8N-HE-rJa" id="iJw-rP-Wdd"/>
