@@ -25,9 +25,70 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Icv-vG-8dc"/>
                                 </connections>
                             </searchBar>
+                            <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="xBV-6T-18H">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JOA-7D-e9L">
+                                    <size key="itemSize" width="320" height="320"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CellReuseIdentifier" id="q88-6N-pQh" customClass="CollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TaR-Wg-Sdv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="TaR-Wg-Sdv" firstAttribute="leading" secondItem="q88-6N-pQh" secondAttribute="leading" id="YMa-dX-7rG"/>
+                                            <constraint firstItem="TaR-Wg-Sdv" firstAttribute="top" secondItem="q88-6N-pQh" secondAttribute="top" id="ct5-US-TIu"/>
+                                            <constraint firstAttribute="bottom" secondItem="TaR-Wg-Sdv" secondAttribute="bottom" id="dZ7-Dq-Efd"/>
+                                            <constraint firstAttribute="trailing" secondItem="TaR-Wg-Sdv" secondAttribute="trailing" id="uae-Zy-xd4"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="YMa-dX-7rG"/>
+                                                <exclude reference="ct5-US-TIu"/>
+                                                <exclude reference="dZ7-Dq-Efd"/>
+                                                <exclude reference="uae-Zy-xd4"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="YMa-dX-7rG"/>
+                                                <include reference="ct5-US-TIu"/>
+                                                <include reference="dZ7-Dq-Efd"/>
+                                                <include reference="uae-Zy-xd4"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="imageView" destination="TaR-Wg-Sdv" id="VNA-tL-eQ5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="74" y="82" width="491" height="718"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pi6-gp-ZNU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cPM-kL-ckT"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.087030440414507804" green="0.087030440414507804" blue="0.087030440414507804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="xBV-6T-18H" secondAttribute="trailing" id="Bok-QM-EqG"/>
+                            <constraint firstItem="xBV-6T-18H" firstAttribute="top" secondItem="z8N-HE-rJa" secondAttribute="bottom" id="Pfk-r2-kwA"/>
+                            <constraint firstItem="xBV-6T-18H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QZ5-8e-fvM"/>
+                            <constraint firstItem="xBV-6T-18H" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="a0x-ac-DyS"/>
                             <constraint firstItem="z8N-HE-rJa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cdO-VA-3Id"/>
                             <constraint firstItem="z8N-HE-rJa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lPO-99-TGn">
                                 <variation key="heightClass=regular" constant="-20"/>
@@ -37,21 +98,36 @@
                             </constraint>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="xBV-6T-18H"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="cdO-VA-3Id"/>
                                 <exclude reference="lPO-99-TGn"/>
                                 <exclude reference="tEn-hE-O6e"/>
+                                <exclude reference="Bok-QM-EqG"/>
+                                <exclude reference="Pfk-r2-kwA"/>
+                                <exclude reference="QZ5-8e-fvM"/>
+                                <exclude reference="a0x-ac-DyS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="xBV-6T-18H"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="cdO-VA-3Id"/>
                                 <include reference="lPO-99-TGn"/>
                                 <include reference="tEn-hE-O6e"/>
+                                <include reference="Bok-QM-EqG"/>
+                                <include reference="Pfk-r2-kwA"/>
+                                <include reference="QZ5-8e-fvM"/>
+                                <include reference="a0x-ac-DyS"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="xBV-6T-18H" id="Vzd-RH-RYD"/>
                         <outlet property="searchBar" destination="z8N-HE-rJa" id="iJw-rP-Wdd"/>
                     </connections>
                 </viewController>

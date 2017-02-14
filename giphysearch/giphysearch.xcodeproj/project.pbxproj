@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190175D61E52B84900DF3FDE /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 190175D51E52B84900DF3FDE /* CollectionViewCell.m */; };
 		A5172CCAC49197DD4A6FB2D4 /* libPods-giphysearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4670CDD41EC949599C160B16 /* libPods-giphysearch.a */; };
 		B8C29C891E517D8700A4C768 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C29C881E517D8700A4C768 /* main.m */; };
 		B8C29C8C1E517D8700A4C768 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C29C8B1E517D8700A4C768 /* AppDelegate.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190175D41E52B84900DF3FDE /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		190175D51E52B84900DF3FDE /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		4670CDD41EC949599C160B16 /* libPods-giphysearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-giphysearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		881AADDA83A1862BCA353C01 /* Pods-giphysearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giphysearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giphysearch/Pods-giphysearch.debug.xcconfig"; sourceTree = "<group>"; };
 		9B488E822EF1FA46238112D1 /* Pods-giphysearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giphysearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-giphysearch/Pods-giphysearch.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				B8C29C8B1E517D8700A4C768 /* AppDelegate.m */,
 				B8C29C8D1E517D8700A4C768 /* ViewController.h */,
 				B8C29C8E1E517D8700A4C768 /* ViewController.m */,
+				190175D41E52B84900DF3FDE /* CollectionViewCell.h */,
+				190175D51E52B84900DF3FDE /* CollectionViewCell.m */,
 				B8C29C901E517D8700A4C768 /* Main.storyboard */,
 				B8C29C931E517D8700A4C768 /* Assets.xcassets */,
 				B8C29C951E517D8700A4C768 /* LaunchScreen.storyboard */,
@@ -346,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C29C8F1E517D8700A4C768 /* ViewController.m in Sources */,
+				190175D61E52B84900DF3FDE /* CollectionViewCell.m in Sources */,
 				B8C29C8C1E517D8700A4C768 /* AppDelegate.m in Sources */,
 				B8C29C891E517D8700A4C768 /* main.m in Sources */,
 			);
@@ -573,6 +579,7 @@
 				B8C29CB31E517D8800A4C768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8C29CB41E517D8800A4C768 /* Build configuration list for PBXNativeTarget "giphysearchTests" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +588,7 @@
 				B8C29CB61E517D8800A4C768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B8C29CB71E517D8800A4C768 /* Build configuration list for PBXNativeTarget "giphysearchUITests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +597,7 @@
 				B8C29CB91E517D8800A4C768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
