@@ -128,6 +128,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="xBV-6T-18H" id="Vzd-RH-RYD"/>
+                        <outlet property="collectionViewFlowLayout" destination="JOA-7D-e9L" id="4JM-4Q-Zhg"/>
                         <outlet property="searchBar" destination="z8N-HE-rJa" id="iJw-rP-Wdd"/>
                     </connections>
                 </viewController>

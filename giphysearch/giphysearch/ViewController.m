@@ -1,14 +1,16 @@
+#include <stdlib.h>
 #import "ViewController.h"
 #import "CollectionViewCell.h"
 #import <Giphy-iOS/AXCGiphy.h>
 #import <AnimatedGIFImageSerialization/AnimatedGIFImageSerialization.h>
 
 NSString * const CollectionViewCellIdentifier = @"CellReuseIdentifier";
-NSInteger const MaximumResults = 20;
-@interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+NSInteger const MaximumResults = 1000;
+@interface ViewController () <UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) NSArray * searchResults;
-@property (weak, nonatomic) IBOutlet UICollectionView * collectionView;
+@property (strong, nonatomic) NSArray* searchResults;
+@property (weak, nonatomic) IBOutlet UICollectionView* collectionView;
+@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout* collectionViewFlowLayout;
 @property (nonatomic, weak) IBOutlet UISearchBar* searchBar;
 
 @end
@@ -18,6 +20,7 @@ NSInteger const MaximumResults = 20;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [AXCGiphy setGiphyAPIKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"GiphyAPIKey"]];
+    self.collectionView.collectionViewLayout = self.collectionViewFlowLayout;
     [self customizeView];
 }
 
@@ -83,6 +86,17 @@ NSInteger const MaximumResults = 20;
     }] resume];
     
     return cell;
+}
+
+#pragma UICollectionViewDelegateFlowLayout
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    int collectionViewSizeWidth = collectionView.frame.size.width - arc4random_uniform(50) - 5;
+    int collectionViewSizeHeight = collectionView.frame.size.width - arc4random_uniform(25) - 5;
+    return CGSizeMake(collectionViewSizeWidth/2, collectionViewSizeHeight/2);
 }
 
 @end
