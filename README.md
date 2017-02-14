@@ -12,7 +12,7 @@ It's pretty easy to setup and develop giphysearch:
 
 Building is as simple as pressing the play button in Xcode. You can run the project's tests by choosing 'Product -> Test' (though note that sometimes the UI tests fail for no good reason).
 
-Note that so far the app has only been tested on the Xcode simulator.
+Note that so far the app has only been tested on the Xcode simulator, and it displays funkiness in non-iPhone6 formats.
 
 The owner of this project appreciates the following:
 
