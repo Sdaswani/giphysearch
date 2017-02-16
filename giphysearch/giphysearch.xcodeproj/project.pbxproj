@@ -11,6 +11,9 @@
 		19A7BCF01E541AA4001B880A /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7BCEF1E541AA4001B880A /* Request.m */; };
 		19A7BCF31E541ADC001B880A /* RequestProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7BCF21E541ADC001B880A /* RequestProcessor.m */; };
 		19A7BCF71E54211E001B880A /* ServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7BCF61E54211E001B880A /* ServiceLocator.m */; };
+		19A7BCFB1E556709001B880A /* RequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7BCFA1E556709001B880A /* RequestTests.m */; };
+		19A7BCFD1E556858001B880A /* RequestProcessorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7BCFC1E556858001B880A /* RequestProcessorTests.m */; };
+		66539EC25E4E2F3FB4C82724 /* libPods-giphysearchTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E1D318F99225898DB4CBAC6 /* libPods-giphysearchTests.a */; };
 		A5172CCAC49197DD4A6FB2D4 /* libPods-giphysearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4670CDD41EC949599C160B16 /* libPods-giphysearch.a */; };
 		B8C29C891E517D8700A4C768 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C29C881E517D8700A4C768 /* main.m */; };
 		B8C29C8C1E517D8700A4C768 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C29C8B1E517D8700A4C768 /* AppDelegate.m */; };
@@ -49,9 +52,13 @@
 		19A7BCF41E541C53001B880A /* ResultProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultProcessor.h; path = model/search/ResultProcessor.h; sourceTree = "<group>"; };
 		19A7BCF51E54211E001B880A /* ServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceLocator.h; sourceTree = "<group>"; };
 		19A7BCF61E54211E001B880A /* ServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceLocator.m; sourceTree = "<group>"; };
+		19A7BCFA1E556709001B880A /* RequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestTests.m; path = model/search/RequestTests.m; sourceTree = "<group>"; };
+		19A7BCFC1E556858001B880A /* RequestProcessorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestProcessorTests.m; path = model/search/RequestProcessorTests.m; sourceTree = "<group>"; };
 		4670CDD41EC949599C160B16 /* libPods-giphysearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-giphysearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5361DC8068C2209B26669E73 /* Pods-giphysearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giphysearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-giphysearchTests/Pods-giphysearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		881AADDA83A1862BCA353C01 /* Pods-giphysearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giphysearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giphysearch/Pods-giphysearch.debug.xcconfig"; sourceTree = "<group>"; };
 		9B488E822EF1FA46238112D1 /* Pods-giphysearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giphysearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-giphysearch/Pods-giphysearch.release.xcconfig"; sourceTree = "<group>"; };
+		9E1D318F99225898DB4CBAC6 /* libPods-giphysearchTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-giphysearchTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C29C841E517D8700A4C768 /* giphysearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = giphysearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C29C881E517D8700A4C768 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B8C29C8A1E517D8700A4C768 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +75,7 @@
 		B8C29CA81E517D8800A4C768 /* giphysearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = giphysearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8C29CAC1E517D8800A4C768 /* giphysearchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = giphysearchUITests.m; sourceTree = "<group>"; };
 		B8C29CAE1E517D8800A4C768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8FECD6211A2BA5615DD19B9 /* Pods-giphysearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giphysearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giphysearchTests/Pods-giphysearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66539EC25E4E2F3FB4C82724 /* libPods-giphysearchTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +110,8 @@
 			children = (
 				881AADDA83A1862BCA353C01 /* Pods-giphysearch.debug.xcconfig */,
 				9B488E822EF1FA46238112D1 /* Pods-giphysearch.release.xcconfig */,
+				B8FECD6211A2BA5615DD19B9 /* Pods-giphysearchTests.debug.xcconfig */,
+				5361DC8068C2209B26669E73 /* Pods-giphysearchTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -125,10 +136,28 @@
 			name = Search;
 			sourceTree = "<group>";
 		};
+		19A7BCF81E5566CA001B880A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19A7BCF91E5566CF001B880A /* Search */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		19A7BCF91E5566CF001B880A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				19A7BCFA1E556709001B880A /* RequestTests.m */,
+				19A7BCFC1E556858001B880A /* RequestProcessorTests.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		72329A44153951F92A195AD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				4670CDD41EC949599C160B16 /* libPods-giphysearch.a */,
+				9E1D318F99225898DB4CBAC6 /* libPods-giphysearchTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -187,6 +216,7 @@
 		B8C29CA01E517D8800A4C768 /* giphysearchTests */ = {
 			isa = PBXGroup;
 			children = (
+				19A7BCF81E5566CA001B880A /* Model */,
 				B8C29CA11E517D8800A4C768 /* giphysearchTests.m */,
 				B8C29CA31E517D8800A4C768 /* Info.plist */,
 			);
@@ -229,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B8C29CB41E517D8800A4C768 /* Build configuration list for PBXNativeTarget "giphysearchTests" */;
 			buildPhases = (
+				B641C8C2DB04BE2F9A9695EE /* [CP] Check Pods Manifest.lock */,
 				B8C29C991E517D8800A4C768 /* Sources */,
 				B8C29C9A1E517D8800A4C768 /* Frameworks */,
 				B8C29C9B1E517D8800A4C768 /* Resources */,
+				065D1C59883BF4FC139F4359 /* [CP] Embed Pods Frameworks */,
+				CAE3EC893B8F96F6948C4554 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -331,6 +364,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		065D1C59883BF4FC139F4359 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-giphysearchTests/Pods-giphysearchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9CB59B81459F9B7CEDA80F47 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -359,6 +407,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-giphysearch/Pods-giphysearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B641C8C2DB04BE2F9A9695EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CAE3EC893B8F96F6948C4554 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-giphysearchTests/Pods-giphysearchTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F84ADAEF68F21416D0B39424 /* [CP] Check Pods Manifest.lock */ = {
@@ -398,6 +476,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C29CA21E517D8800A4C768 /* giphysearchTests.m in Sources */,
+				19A7BCFD1E556858001B880A /* RequestProcessorTests.m in Sources */,
+				19A7BCFB1E556709001B880A /* RequestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +632,7 @@
 		};
 		B8C29CB51E517D8800A4C768 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8FECD6211A2BA5615DD19B9 /* Pods-giphysearchTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = giphysearchTests/Info.plist;
@@ -564,6 +645,7 @@
 		};
 		B8C29CB61E517D8800A4C768 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5361DC8068C2209B26669E73 /* Pods-giphysearchTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = giphysearchTests/Info.plist;
