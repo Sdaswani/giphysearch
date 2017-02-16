@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
+#import "ResultProcessor.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController <ResultProcessor>
 
 @end
 

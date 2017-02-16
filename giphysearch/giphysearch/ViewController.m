@@ -3,9 +3,10 @@
 #import "CollectionViewCell.h"
 #import <Giphy-iOS/AXCGiphy.h>
 #import <AnimatedGIFImageSerialization/AnimatedGIFImageSerialization.h>
+#import "Request.h"
+#import "ServiceLocator.h"
 
 NSString * const CollectionViewCellIdentifier = @"CellReuseIdentifier";
-NSInteger const MaximumResults = 1000;
 @interface ViewController () <UISearchBarDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) NSArray* searchResults;
@@ -19,9 +20,20 @@ NSInteger const MaximumResults = 1000;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [AXCGiphy setGiphyAPIKey:[[NSBundle mainBundle] objectForInfoDictionaryKey:@"GiphyAPIKey"]];
+
     self.collectionView.collectionViewLayout = self.collectionViewFlowLayout;
+
     [self customizeView];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark UI customizations
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 -(void)customizeView {
@@ -43,25 +55,19 @@ NSInteger const MaximumResults = 1000;
     // UISearchBar Color Customizations - END
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark UI customizations
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
+#pragma mark ResultProcessor methods
+-(void) processResults:(NSArray*)results {
+    // TODO: do something smart if results count is zero.
+    self.searchResults = results;
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self.collectionView reloadData];
+    }];
 }
 
 #pragma mark UISearchBarDelegate methods
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [AXCGiphy searchGiphyWithTerm:searchBar.text limit:MaximumResults
-                           offset:0 completion:^(NSArray *results, NSError *error) {
-                               self.searchResults = results;
-                               [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                   [self.collectionView reloadData];
-                               }];
-    }];
+    Request* newRequest = [[Request alloc] initWithSearchTerm:searchBar.text];
+    [[[ServiceLocator sharedLocator] requestProcessor] processRequest:newRequest];
 }
 
 #pragma mark UICollectionViewDataSource
@@ -75,7 +81,7 @@ NSInteger const MaximumResults = 1000;
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:CollectionViewCellIdentifier forIndexPath:indexPath];
-    AXCGiphy * gif = self.searchResults[indexPath.item];
+    AXCGiphy* gif = self.searchResults[indexPath.item];
     
     NSURLRequest * request = [NSURLRequest requestWithURL:gif.originalImage.url];
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

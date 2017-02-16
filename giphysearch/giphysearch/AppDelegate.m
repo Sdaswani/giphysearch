@@ -1,4 +1,5 @@
 #import "AppDelegate.h"
+#import "ServiceLocator.h"
 
 @interface AppDelegate ()
 
@@ -8,7 +9,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Set up central hub for services.
+    UIViewController* mainController = (UIViewController*) self.window.rootViewController;
+    [[ServiceLocator sharedLocator] setResultProcessor:(id<ResultProcessor>)mainController];
+    [[ServiceLocator sharedLocator] setRequestProcessor:[[RequestProcessor alloc] init]];
     return YES;
 }
 

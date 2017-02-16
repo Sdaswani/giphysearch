@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		190175D61E52B84900DF3FDE /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 190175D51E52B84900DF3FDE /* CollectionViewCell.m */; };
+		19A7BCF01E541AA4001B880A /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7BCEF1E541AA4001B880A /* Request.m */; };
+		19A7BCF31E541ADC001B880A /* RequestProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7BCF21E541ADC001B880A /* RequestProcessor.m */; };
+		19A7BCF71E54211E001B880A /* ServiceLocator.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A7BCF61E54211E001B880A /* ServiceLocator.m */; };
 		A5172CCAC49197DD4A6FB2D4 /* libPods-giphysearch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4670CDD41EC949599C160B16 /* libPods-giphysearch.a */; };
 		B8C29C891E517D8700A4C768 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C29C881E517D8700A4C768 /* main.m */; };
 		B8C29C8C1E517D8700A4C768 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B8C29C8B1E517D8700A4C768 /* AppDelegate.m */; };
@@ -39,6 +42,13 @@
 /* Begin PBXFileReference section */
 		190175D41E52B84900DF3FDE /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		190175D51E52B84900DF3FDE /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		19A7BCEE1E541AA4001B880A /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Request.h; path = model/search/Request.h; sourceTree = "<group>"; };
+		19A7BCEF1E541AA4001B880A /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Request.m; path = model/search/Request.m; sourceTree = "<group>"; };
+		19A7BCF11E541ADC001B880A /* RequestProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestProcessor.h; path = model/search/RequestProcessor.h; sourceTree = "<group>"; };
+		19A7BCF21E541ADC001B880A /* RequestProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestProcessor.m; path = model/search/RequestProcessor.m; sourceTree = "<group>"; };
+		19A7BCF41E541C53001B880A /* ResultProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultProcessor.h; path = model/search/ResultProcessor.h; sourceTree = "<group>"; };
+		19A7BCF51E54211E001B880A /* ServiceLocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceLocator.h; sourceTree = "<group>"; };
+		19A7BCF61E54211E001B880A /* ServiceLocator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceLocator.m; sourceTree = "<group>"; };
 		4670CDD41EC949599C160B16 /* libPods-giphysearch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-giphysearch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		881AADDA83A1862BCA353C01 /* Pods-giphysearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giphysearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giphysearch/Pods-giphysearch.debug.xcconfig"; sourceTree = "<group>"; };
 		9B488E822EF1FA46238112D1 /* Pods-giphysearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giphysearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-giphysearch/Pods-giphysearch.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +105,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		19A7BCEB1E541A0C001B880A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19A7BCEC1E541A14001B880A /* Search */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		19A7BCEC1E541A14001B880A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				19A7BCEE1E541AA4001B880A /* Request.h */,
+				19A7BCEF1E541AA4001B880A /* Request.m */,
+				19A7BCF11E541ADC001B880A /* RequestProcessor.h */,
+				19A7BCF21E541ADC001B880A /* RequestProcessor.m */,
+				19A7BCF41E541C53001B880A /* ResultProcessor.h */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
 		72329A44153951F92A195AD5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +158,9 @@
 		B8C29C861E517D8700A4C768 /* giphysearch */ = {
 			isa = PBXGroup;
 			children = (
+				19A7BCF51E54211E001B880A /* ServiceLocator.h */,
+				19A7BCF61E54211E001B880A /* ServiceLocator.m */,
+				19A7BCEB1E541A0C001B880A /* Model */,
 				B8C29C8A1E517D8700A4C768 /* AppDelegate.h */,
 				B8C29C8B1E517D8700A4C768 /* AppDelegate.m */,
 				B8C29C8D1E517D8700A4C768 /* ViewController.h */,
@@ -350,8 +383,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A7BCF31E541ADC001B880A /* RequestProcessor.m in Sources */,
 				B8C29C8F1E517D8700A4C768 /* ViewController.m in Sources */,
+				19A7BCF01E541AA4001B880A /* Request.m in Sources */,
 				190175D61E52B84900DF3FDE /* CollectionViewCell.m in Sources */,
+				19A7BCF71E54211E001B880A /* ServiceLocator.m in Sources */,
 				B8C29C8C1E517D8700A4C768 /* AppDelegate.m in Sources */,
 				B8C29C891E517D8700A4C768 /* main.m in Sources */,
 			);
